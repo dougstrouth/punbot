@@ -29,6 +29,9 @@ def punbot (word1, word2):
         main = syns1
         second = syns2
 
+    # sort the names
+    print(main.sort())
+
     for x in main[0]:
         for i in second[0]:
             print(x+" "+i)
