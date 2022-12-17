@@ -4,15 +4,15 @@ import requests
 import json
 
 # api key from dictionaryapi.com
-api_key = ""
+api_key = "a2071270-0839-467f-9bc9-963ca972f853"
 
 def punbot (word1, word2):
     payload = {
         "key":api_key
     }
 
-    url1=""
-    url2=""
+    url1="https://www.dictionaryapi.com/api/v3/references/thesaurus/json/"+word1
+    url2="https://www.dictionaryapi.com/api/v3/references/thesaurus/json/"+word2
 
     request1 = requests.request("GET",url1,params=payload)
     syns1 = request1.json()[0]['meta']['syns']
@@ -36,4 +36,4 @@ def punbot (word1, word2):
 
 
 
-
+punbot("castle","town")
