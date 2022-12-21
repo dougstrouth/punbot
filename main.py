@@ -19,7 +19,7 @@ def punbot (word1, word2):
     print(syns1)
     
     request2 = requests.request("GET",url2,params=payload)
-    syns2 = request1.json()[0]['meta']['syns']
+    syns2 = request2.json()[0]['meta']['syns']
     print(syns2)
     
     if len(syns1[0])>len(syns2[0]):
@@ -29,9 +29,6 @@ def punbot (word1, word2):
         main = syns1
         second = syns2
 
-    # sort the names
-    print(main.sort())
-
     for x in main[0]:
         for i in second[0]:
             print(x+" "+i)
@@ -39,4 +36,4 @@ def punbot (word1, word2):
 
 
 
-punbot("castle","town")
+punbot("dollop","wallop")
