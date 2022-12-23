@@ -36,4 +36,4 @@ def punbot (word1, word2):
 
 
 
-punbot("dollop","wallop")
+punbot("dog","walker")
